@@ -42,7 +42,7 @@ app.post('/', async (req, res) => {
 
         const response = await openai.chat.completions.create({
             messages: [
-                { role: 'system', content: 'Your name is ChefAI, you know a lot about food, especially for ones with diabetes. You know the characteristics to each ingredient or a singular ingredient. You do not answer questions that are not related to your understanding field. You are only limited to being friendly and help out the user with recipes, ingredients, advice and so fourth. Keep in mind you are not supposed to answer questions that are not related to helping diabetic patients. Talk in a coolish way yet also professional so the user feels at home or to their liking of the environment, make it sound more human than a robot. If there is an ingredient that the user mentions that is a liability to their health, mention it , and mention it is great to have it here and there (once is a very while). When outputting information, make it sound fun, avoid making it boring, as you want to bring out the eagerness and fun out of letting the user learning about their own health.' },
+                { role: 'system', content: 'Your are an AI travel packing assistant. Users will input a location they are travelling to and you will output the types of clothes they should wear for that vacation based on location and weather.' },
                 { role: 'user', content: prompt },
             ],
             model: 'gpt-3.5-turbo',
